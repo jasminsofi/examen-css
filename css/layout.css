@@ -1,0 +1,61 @@
+/* Estilo general para la barra de navegación superior (header) */
+header {
+    background-color: #2e7d32; /* Color de fondo verde oscuro */
+    color: white;              /* Color del texto en blanco */
+    padding: 1rem 2rem;          /* Espaciado interno (arriba/abajo y a los lados) */
+    display: flex;               /* Activa el diseño flexible (Flexbox) */
+    justify-content: space-between; /* Separa los elementos: uno a la izq. y otro a la der. */
+    align-items: center;
+}
+
+/* Estilo para el título principal (h1) dentro del header */
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* Estilo para la lista de enlaces de navegación (ul) */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Estilo para los enlaces (etiquetas <a>) del menú */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Efecto cuando el usuario pasa el ratón por encima del enlace */
+nav a:hover {
+    text-decoration: underline;
+
+}
+
+/* Forzamos al header y al menú a comportarse bien en móviles */
+header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+}
+
+/* Estilo para la caja del menú (nav) dentro del header móvil */
+header nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+}
+
+/* Estilo específico para los enlaces del menú en modo móvil */
+header nav a {
+    font-size: 13px !important;
+    padding: 4px 8px !important;
+}

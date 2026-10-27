@@ -1,0 +1,544 @@
+
+
+/* Importación de archivos base 
+@import url('layout.css');
+@import url('components.css');
+@import url('animations.css'); */
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4fbf7; /* Fondo general suave y fresco */
+}
+
+/* Grilla estricta de 2 en 2 productos (Tarjetas más grandecitas) */
+/* Contenedor principal que organiza las tarjetas en una cuadrícula estricta */
+.product-grid-20 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* Espacio amplio entre tarjetas */
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo para las tarjetas de producto */
+.product-card {
+    background-color: #e8f8f0; /* Tono verde claro ecológico */
+    border: 1px solid #b7ebd0; /* Borde sutil armónico */
+    border-radius: 16px;      /* Esquinas redondeadas */
+    padding: 2rem;             /* Espacio interno amplio */
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse por encima */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(46, 204, 113, 0.25);
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 240px;         
+    object-fit: cover;    
+    border-radius: 12px;   
+    margin-bottom: 1.2rem;
+}
+
+/* Textos dentro de la tarjeta */
+.product-card h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.product-card img {
+    width: 100%;          
+    height: 380px;        
+    object-fit: cover;    
+    border-radius: 8px;   
+    margin-bottom: 1rem;   
+}
+
+
+
+.products-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 38, 28, 0.55); /* Tono verde oscuro semitransparente */
+    z-index: 2;
+}
+
+/* Contenedor del contenido (grilla y paginación) que flota sobre el video */
+.products-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo-catalogo {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* Estilos generales de la página de inicio */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbf9;
+    color: #2d6a4f;
+}
+
+/* Barra de navegación */
+.site-header {
+    background-color: #1b4332;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #80ed99;
+    border-bottom: 2px solid #80ed99;
+    padding-bottom: 3px;
+}
+
+/* Sección Hero (Bienvenida) */
+.hero-section {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 106, 79, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Botón principal */
+.btn-principal {
+    display: inline-block;
+    background-color: #52b788;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-principal:hover {
+    background-color: #40916c;
+    transform: translateY(-2px);
+}
+
+/* Sección de Características */
+.features-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-section h2 {
+    color: #1b4332;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h3 {
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #2d6a4f;
+    line-height: 1.5;
+}
+
+/* Pie de página */
+.site-footer {
+    background-color: #1b4332;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor del logo y el texto alineados horizontalmente */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Menú de navegación */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #80ed99;
+    border-bottom: 2px solid #80ed99;
+    padding-bottom: 3px;
+}
+
+
+
+.products-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    box-sizing: border-box;
+}
+
+/* Filtros a la izquierda */
+.products-layout > .filters-sidebar {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Catálogo a la derecha */
+.products-layout > .catalog-content {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Fondo del catálogo y video */
+.products-layout .products-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 24px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Video detrás del contenido */
+.products-layout .bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+    transform: none;
+    z-index: -2;
+}
+
+/* Capa de contraste */
+.products-layout .video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(18, 38, 28, 0.55);
+    pointer-events: none;
+}
+
+/* Contenido del catálogo */
+.products-layout .products-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Título */
+.products-layout .titulo-catalogo {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* Tarjetas: usa la clase que ya tiene tu HTML */
+.products-layout .product-grid-20 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Imágenes de los productos */
+.products-layout .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 1050px) {
+    .products-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 20px;
+        padding: 24px 16px;
+    }
+
+    .products-layout .product-grid-20 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 700px) {
+    .products-layout {
+        grid-template-columns: 1fr;
+        padding: 18px 12px;
+    }
+
+    .products-layout .products-section {
+        min-height: auto;
+        padding: 18px 12px;
+    }
+
+    .products-layout .product-grid-20 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+/* --- Estilos del Footer Principal --- */
+.main-footer {
+    background-color: #112d20; /* Verde oscuro acorde a tu tema */
+    color: #ffffff;            /* Texto blanco centrado */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;          /* Asegura que quede siempre abajo */
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- Estilos del Subcabecera / Banner Sobre Nosotros --- */
+.banner-sobre-nosotros {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-sobre-nosotros .imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.65); /* Oscurece la imagen para que el texto resalte correctamente */
+}
+
+.texto-sobre-imagen {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.texto-sobre-imagen h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #4ade80; /* Tono verde brillante acorde a tu diseño */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra para legibilidad */
+}
+
+.texto-sobre-imagen p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+header nav, header ul, .menu, .nav-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces bajen si no caben en una sola línea */
+    justify-content: center; /* Los centra dentro del cuadro verde */
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%;
+    margin: 0;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Pone el logo arriba y el menú abajo ordenados */
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Esto oculta cualquier elemento que intente salirse */
+}
+
+header nav a, header ul li a {
+    font-size: 12px; /* Reduce ligeramente el tamaño para que queden cómodos */
+    padding: 4px 6px; /* Reduce el relleno interno */
+    margin: 2px; /* Espacio pequeño entre ellos */
+}

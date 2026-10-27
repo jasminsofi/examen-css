@@ -1,0 +1,25 @@
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.fav-btn {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+}
+
+.btn-cta {
+  transition: transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+}
